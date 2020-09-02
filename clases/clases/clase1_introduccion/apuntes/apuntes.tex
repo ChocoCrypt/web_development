@@ -1,0 +1,70 @@
+% article example for classicthesis.sty
+\documentclass[10pt,a4paper]{article} % KOMA-Script article scrartcl
+\usepackage{lipsum}     %lorem ipsum text
+\usepackage{titlesec}   %Section settings
+\usepackage{titling}    %Title settings
+\usepackage[margin=10em]{geometry}  %Adjusting margins
+\usepackage{setspace}
+\usepackage{listings}
+\usepackage{amsmath}    %Display equations options
+\usepackage{amssymb}    %More symbols
+\usepackage{xcolor}     %Color settings
+\usepackage{pagecolor}
+\usepackage{mdframed}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{longtable}
+\usepackage{multicol}
+\usepackage{graphicx}
+\graphicspath{ {./Images/} }
+\setlength{\columnsep}{1cm}
+
+% ====| color de la pagina y del fondo |==== %
+\pagecolor{black}
+\color{white}
+
+
+
+\begin{document}
+    %========================{TITLE}====================%
+    \title{\rmfamily\normalfont\spacedallcaps{ Clase1 Introduccion Desarrollo web }}
+    \author{\spacedlowsmallcaps{Rodrigo Castillo}}
+    \date{\today} 
+    
+    \maketitle
+     
+
+     % ====| Loguito |==== %
+    \includegraphics[width=0.1\linewidth]{negro_cara.png}
+    %=======================NOTES GOES HERE===================%
+    \section{introduccion}
+        Como funcionan las aplicaciones web? 
+        \subsection{modelo cliente servidor}
+            la idea es que hay clientes que se comunican con servidores , los
+            clientes mas recurrentes son computadores y los celulares  
+            \\ el modelo cliente servidor funciona de la siguiente manera : 
+            \\ en el servidor se almacenan todas las rutinas en con las que el
+            cliente interactua , el cliente envia solicitudes al servidor y
+            pidiendo información  
+            \\ la forma en la que el cliente se comunica es a travez de una
+            interfaz de usuario que sea interactiva y didactica y convierte
+            toda la informacion que nosotros almacenamos en botones, imágenes,
+            animaciones....bla bla bla  
+        
+    
+
+
+
+
+
+
+
+    %=======================NOTES ENDS HERE===================%
+    
+    % bib stuff
+    \nocite{*}
+    \addtocontents{toc}{\protect\vspace{\beforebibskip}}
+    \addcontentsline{toc}{section}{\refname}    
+    \bibliographystyle{plain}
+    \bibliography{../Bibliography}
+\end{document}

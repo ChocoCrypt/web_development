@@ -1,0 +1,139 @@
+% article example for classicthesis.sty
+\documentclass[10pt,a4paper]{article} % KOMA-Script article scrartcl
+\usepackage{import}
+\usepackage{xifthen}
+\usepackage{pdfpages}
+\usepackage{transparent}
+\newcommand{\incfig}[1]{%
+    \def\svgwidth{\columnwidth}
+    \import{./figures/}{#1.pdf_tex}
+}
+\usepackage{lipsum}     %lorem ipsum text
+\usepackage{titlesec}   %Section settings
+\usepackage{titling}    %Title settings
+\usepackage[margin=10em]{geometry}  %Adjusting margins
+\usepackage{setspace}
+\usepackage{listings}
+\usepackage{amsmath}    %Display equations options
+\usepackage{amssymb}    %More symbols
+\usepackage{xcolor}     %Color settings
+\usepackage{pagecolor}
+\usepackage{mdframed}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{longtable}
+\usepackage{multicol}
+\usepackage{graphicx}
+\graphicspath{ {./Images/} }
+\setlength{\columnsep}{1cm}
+
+% ====| color de la pagina y del fondo |==== %
+\pagecolor{black}
+\color{white}
+
+
+
+\begin{document}
+    %========================{TITLE}====================%
+    \title{\rmfamily\normalfont\spacedallcaps{ Punto 1 taller preparcial }}
+    \author{\spacedlowsmallcaps{Rodrigo Castillo}}
+    \date{\today}
+
+    \maketitle
+
+
+     % ====| Loguito |==== %
+    \includegraphics[width=0.1\linewidth]{negro_cara.png}
+    %=======================NOTES GOES HERE===================%
+    \section{enunciado}
+
+        Un grupo de investigación en psicologı́a está interesado en conocer el efecto de la
+        validación social en la toma de decisiones en problemas cotidianos. En el estudio
+        se requiere un instrumento (aplicación web) para la recolección de la información,
+        acontinuación, se encuentra la explicación de parte de uno de los investigadores.
+
+        \\ Estamos estudiado la dificultad que experimentan algunas personas en la toma de decisiones frente
+        a ciertos problemas cotidianos. Algunos de esos problemas no son fáciles de comunicar a los demás
+        inclusive si son cercanos y esto dificulta que la persona actué oportunamente frente a los problemas.
+        Queremos estudiar el efecto que tiene la interacción social en la toma de decisiones y los juicios
+        colectivos frente a lo que se debe hacer en una determinada situación.
+
+        \\ La investigación involucra un grupo de voluntarios que ha decidido participar en nuestro estu-
+        dio. Le pediremos a algunas personas que “pidan un consejo” y otras deberán “aconsejarlas” para
+        darle solución al problema. Para ello, requerimos una aplicación donde los investigadores puedan
+        postear casos de estudio como si fuera una persona anónima y que otras personas puedan votar por
+        soluciones que, en ocasiones son propuestas y en otras, los voluntarios podrán postear (votar) por
+        soluciones/consejos de otras personas. Los consejos que se den deben ser lo más genuinos que se
+        pueda, los participantes deben sentir eso en la aplicación.
+
+        \\ Esta información será contrastada con los resultados de los casos de estudio, básicamente cuál
+        fue el desenlace de cada situación en la vida real. De la aplicación necesitamos recopilar la informa-
+        ción de cómo “aconsejaron” las personas en la red social para poder analizarlas.
+
+        \\ Antes de comenzar las votaciones, la persona debe llenar sus datos: nombre, nombre anónimo,
+        correo electrónico, género, edad. Automáticamente la aplicación debe dividir a las personas en con-
+        trol y tratamiento sin que lo sepan, de esto depende los casos que se les asignen. En el grupo de
+        control, se dejan solo las soluciones posibles de los casos originales que nacieron de las terapias y
+        en los casos de tratamiento se permiten varios grados de interacción social
+
+        \\Grupo I: Solo vota entre las opciones Grupo II: Vota entre las opciones y puede darle me gus-
+        ta a otras Grupo III: Vota entre las opciones o puede añadir una nueva Grupo IV: Vota entre las
+        opciones, puede añadir nuevas opciones y puede darle me gusta a las otras
+
+        \\ Les dejo un ejemplo de dos casos. En este primer caso, los voluntarios solo deben escoger una
+        de las soluciones propuestas, no pueden añadir nuevas opciones
+
+
+        \\ Persona anónima: Hace 15 años que no hablo con mi papa, se fue con otras personas y nos dejó
+        solos a mi y mi hermano, hoy se encuentra enfermo y está solo, se dé eso por otros familiares, yo
+        me voy a casar pronto. ¿Deberı́a invitarlo a la boda?
+
+        \begin{itemize}
+            \item { opcion 2: No invitarloopcion 1: Invitarlo}
+            \item {opcion 2: No invitarlo}
+        \end{itemize}
+
+
+        \\ En este segundo caso, los voluntarios pueden darle una especie de “me gusta” a todas las op-
+        ciones que consideren adecuadas. Sin embargo, debe seleccionar un único consejo para avanzar al
+        siguiente caso.
+
+        \\ Persona anónima: Mi vecina vigila cada vez que alguien entra y sale de mi apartamento, me vigila
+        cada vez que botó la basura y si hago algo que para ella no este bien crea un escandalo de ello. Es
+        ası́ con todos los vecinos. Una vez llamó a la policı́a de tránsito porque otro vecino parqueó mal el
+        carro. Es muy irritante, el fin de semana voy a hacer una fiesta en mi casa y no se cómo lidiar con
+        esta persona, no quiero terminar tratándola mal.
+
+        \begin{itemize}
+            \item {Habla con ella}
+            \item {Llama a la administración y avisa con anticipación}
+            \item {Busca otro lugar para hacer la fiesta}
+            \item {añadir opción}
+        \end{itemize}
+
+    \section{preguntas :}
+        \begin{itemize}
+            \item {¿Cuáles son los diferentes usuarios qué deberı́a tener la aplicación?}
+            \item {Escriba las historias de usuario adecuadas para este caso}
+            \item {Realice un listado de los requerimientos funcionales y no
+                funcionales de la aplicación según lo manifestado por el
+                investigador}
+            \item {Para cada requerimiento esciba la dificultad, utilidad y
+                tiempo que estime que puede llevar su respectiva elaboración}
+            \item {Haga un gráfico comparativo entre la dificultad y utilidad.
+                ¿Qué criterio de priorización de desarrollo de los
+                requerimientos puede ser utilizado?}
+            \item {Cree un mockup para la aplicación}
+        \end{itemize}
+
+
+
+    %=======================NOTES ENDS HERE===================%
+
+    % bib stuff
+    \nocite{*}
+    \addtocontents{toc}{\protect\vspace{\beforebibskip}}
+    \addcontentsline{toc}{section}{\refname}
+    \bibliographystyle{plain}
+    \bibliography{../Bibliography}
+\end{document}

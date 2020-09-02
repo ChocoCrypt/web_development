@@ -1,0 +1,76 @@
+% article example for classicthesis.sty
+\documentclass[10pt,a4paper]{article} % KOMA-Script article scrartcl
+\usepackage{lipsum}     %lorem ipsum text
+\usepackage{titlesec}   %Section settings
+\usepackage{titling}    %Title settings
+\usepackage[margin=10em]{geometry}  %Adjusting margins
+\usepackage{setspace}
+\usepackage{listings}
+\usepackage{amsmath}    %Display equations options
+\usepackage{amssymb}    %More symbols
+\usepackage{xcolor}     %Color settings
+\usepackage{pagecolor}
+\usepackage{mdframed}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{longtable}
+\usepackage{multicol}
+\usepackage{graphicx}
+\graphicspath{ {./Images/} }
+\setlength{\columnsep}{1cm}
+
+% ====| color de la pagina y del fondo |==== %
+\pagecolor{black}
+\color{white}
+
+
+
+\begin{document}
+    %========================{TITLE}====================%
+    \title{\rmfamily\normalfont\spacedallcaps{ Introduccion a JavaScript }}
+    \author{\spacedlowsmallcaps{Rodrigo Castillo}}
+    \date{\today} 
+    
+    \maketitle
+     
+
+     % ====| Loguito |==== %
+    \includegraphics[width=0.1\linewidth]{negro_cara.png}
+    %=======================NOTES GOES HERE===================%
+    \section{intro}
+        javascript es un lenguaje de alto nivel que se utiliza para el lado del
+        cliente , muchos de los frameworks que hay por ahí funcionan en JS. 
+    \section{Como ejecutar codigo de javascript?}
+        \begin{enumerate}
+            \item {El Browser} 
+            \item {A travez de un script en VScode ejecutado en un archivo HTML} 
+            \item {A travez de NodeJS} 
+        \end{enumerate}
+        
+        \subsection{Ejecutar codigo JavaScript desde el Browser}
+            ir a cualquier pagina desde el browser . 
+            \\ inspeccionar cualquier elemento 
+            \\ abrir console y corremos el comando y ya
+        \subsection{Ejecutar JS a partir de un archivo HTML}
+           se agrega el script y se abre con el browser
+        \subsection{Ejecutar con nodeJS}
+            nodejs <archivo.js>
+        
+        
+    
+
+
+
+
+
+
+
+    %=======================NOTES ENDS HERE===================%
+    
+    % bib stuff
+    \nocite{*}
+    \addtocontents{toc}{\protect\vspace{\beforebibskip}}
+    \addcontentsline{toc}{section}{\refname}    
+    \bibliographystyle{plain}
+    \bibliography{../Bibliography}
+\end{document}
