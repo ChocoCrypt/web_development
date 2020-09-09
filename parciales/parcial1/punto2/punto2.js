@@ -16,11 +16,11 @@ let timeToDate = {
 
     get mes(){
         mes = this.fecha.getMonth();
-        return(mes)
+        return(mes) ;
     },
     get dia(){
         dia = this.fecha.getDate();
-        return(dia)
+        return(dia) ;
     },
     get semana(){
         return(this.dia/7);
@@ -31,11 +31,15 @@ let timeToDate = {
     },
     get daystodate(){
         let res = (this.dado.dia + (this.mes * 30)) - (this.dia + (this.dado.mes * 30));
-        return(res)
+        return(res) ;
     },
     get weakstodate(){
         let res = ((this.dado.dia + (this.mes * 30)) - (this.dia + (this.dado.mes * 30)))/7;
-        return(res)
+        return(res) ;
+    },
+    setfecha(ndia,nmes,nano){
+        let nuevafecha = new date(ndia,nmes,nano) ;
+        this.dado = nuevafecha ;
     }
 
 }
