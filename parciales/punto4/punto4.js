@@ -7,12 +7,18 @@ class StaffList  {
         this.lista = [] ;
     }
     add(nickname , age){
-        //si la edad no es un entero retorno error
-        if(age > 18){
-            this.lista.push(nickname) ;
+        try{
+            //si la edad no es un entero retorno error
+            if(!Number.isInteger(age)) throw Error("la edad tiene que ser un número")
+            if(age > 18){
+                this.lista.push(nickname) ;
+            }
+            else{
+                console.log("La persona tiene que ser mayor de edad");
+            }
         }
-        else{
-            console.log("La persona tiene que ser mayor de edad");
+        catch(err){
+            console.log("la edad no fue un numero");
         }
     }
     remove(nickname){
