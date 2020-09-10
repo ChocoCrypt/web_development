@@ -47,29 +47,3 @@ let timeToDate = {
 console.log(timeToDate.weakstodate);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
