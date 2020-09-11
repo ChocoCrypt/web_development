@@ -1,0 +1,50 @@
+
+*{
+    color: blue;
+    font-family:Arial;
+}
+
+h2{
+    color: greenyellow;
+    font-family:Arial;
+}
+
+h1{
+    color: red;
+    font-family:Arial;
+}
+
+.button-check{
+    color:yellow;
+    font-family:Arial;
+}
+
+.boton2{
+    background-color:red;
+}
+
+.boton3{
+    background-color:yellow;
+}
+
+.button4{
+    background-color:gold;
+    color:green;
+    width:200px;
+    height:200px;
+}
+
+div h1{
+    color:green;
+}
+
+div > h1{
+    color:tomato;
+}
+
+p + h3{
+    font-size:50px;
+    color:olive;
+}
+
+
