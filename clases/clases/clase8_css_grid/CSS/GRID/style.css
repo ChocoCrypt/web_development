@@ -1,13 +1,30 @@
 h1{
     color:red;
 }
+
 .contenedor1{
+    position:relative;
     height: 50vh ;
     width: 50vw ;
-    background-color:red;
+    background-color:rgb(0,0,0);
 }
+
 .contenedor2{
+    position:relative;
     height:600px;
     width:600px;
+    margin:10px;
     background-color:blue;
 }
+
+.contenedor3{
+    height:99vh;
+    width:99vw;
+    background-color:yellow;
+    margin:0%;
+}
+
+p{
+    color:tomato;
+}
+
