@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo del dom</title>
+</head>
+
+<body>
+
+<div id = "text">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio ad maxime
+    consectetur ir al texto <a href="#texto2">texto 2</a> tempore a iste,
+    totam suscipit dolores veritatis amet, <a href="#text1">text1</a> culpa
+    corrupti minus eos modi animi <a href="#text1"> texto1</a> cumque sint perferendis quos.
+</div>
+
+<section id="texto2">
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor in
+    nostrum quae nam quisquam amet odit cupiditate modi ipsum necessitatibus
+    quam, similique eos excepturi molestiae, repudiandae at, sit eveniet
+    aspernatur.</p>
+</section>
+
+<section id="text1">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora
+    illum dolores impedit vitae libero commodi nam quas. Libero porro eum eos
+    suscipit architecto, qui, nobis rerum quidem repellat accusamus
+    fugit.</p>
+    <p>esto es diferente</p>
+</section>
+
+<button id ="miboton" onmouseover="escribirhola()"> esto es un pinchi boton
+que ejecuta una accion de js</button>
+
+<script>
+    let algo = document.createElement("a")
+    algo.innerText = "google"
+    algo.href = "https.//www.google.com";
+
+    let algo2 = document.createElement("p");
+    algo2.innerText = "hola supergonorreas";
+    
+    document.getElementById("texto2").remove();
+    document.getElementsByTagName("body")[0].appendChild(algo);
+    document.getElementsByTagName("body")[0].appendChild(algo2);
+
+    function escribirhola(){
+        something = document.createElement("p");
+        something.innerText = "esto es una crema jajajaj ";
+        console.log("jajaja");
+        document.getElementsByTagName("body")[0].appendChild(something);
+
+        setTimeout(() => {
+            something.remove();
+        }, 5000);
+    }
+</script>
+
+</body>
+</html>
