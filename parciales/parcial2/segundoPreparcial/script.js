@@ -2,6 +2,7 @@ let alive = true;
 let LastClickColor = "";
 let LastCardColor = "";
 let puntuation = 0;
+let level = 1;
 let audio = document.createElement("audio")
 let source = document.createElement("source")
 source.setAttribute("src", "NorbertoSong.mp3")
@@ -10,7 +11,8 @@ audio.appendChild(source)
 audio.loop = true;
 audio.play()
 
-let ismuted = true;
+let ismuted = true; 
+let nivel = 1;
 
 class CardGame extends HTMLElement{
     constructor(){
@@ -43,6 +45,7 @@ class CardGame extends HTMLElement{
         console.log("LastClickColor:", LastClickColor);
         if(LastClickColor == LastCardColor){
             puntuation = puntuation + 1;
+            level = level + 1 ;
             this.style.backgroundColor = "#00ff88";
             this.style.backgroundImage = "none"
         }else{
@@ -51,6 +54,11 @@ class CardGame extends HTMLElement{
             this.style.backgroundImage = "none"
         }
         document.querySelector("#puntuacion").innerText = "Puntuación : " + puntuation
+        document.querySelector("#nivel").innerText = "Nivel : " + Math.ceil(puntuation/5);
+        //document.querySelector(".tablero-juego").style.gridTemplateColumns  = repeat(nivel,auto) ; //aca no se como modificar el grid
+        //ya sabemos que el nivel es el maximo entero de puntuation/5
+        //debemos agarrar grid template columns, modificarlo y añadirle los hijos que sean necesarios hasta completar la cuadricula 
+        //sin embargo, no solo no funciona sino que daña todo, por lo que, lastimosamente, decidí entregar el trabajo así
         setTimeout(()=>
         {
             this.style.opacity = 0.7
@@ -59,7 +67,7 @@ class CardGame extends HTMLElement{
     }
 
     static get observedAttributes(){
-        return ["color", "tipo", "opacidad"]
+        return ["color", "tipo", "opacidad" ];
     }
 
 }
@@ -126,8 +134,11 @@ let gatos = {
 }
 
 // # LLenando el tablerito
-let ncas = 64;
+let exponente = nivel + 1 ;
+let ncas = Math.pow(2,exponente);
 
+//a esto hay que modificarle el grid template columns por repeat(exponente,auto) pero no me deja agarrar el elemento
+tablero_juego = document.querySelector(".tablero-juego");
 for(let i = 0; i < ncas; i++){
     let temp = document.createElement("casilla-gatito");
     tablero.appendChild(temp);
@@ -208,7 +219,6 @@ audiobutton = document.querySelector("#audio")
 audiobutton.addEventListener("click", stopSong)
 
 function stopSong(){
-    console.log("Aqui");
     if(ismuted){
         audio.play();
         audiobutton.style.backgroundImage = "url('MuteOn.png')";
@@ -216,7 +226,7 @@ function stopSong(){
     }else{
         audio.pause();
         audiobutton.style.backgroundImage = "url('muteOff.png')";
-        ismuted = true;
+        ismuted = true; 
     }
 }
 

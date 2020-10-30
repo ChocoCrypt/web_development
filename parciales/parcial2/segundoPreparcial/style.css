@@ -5,7 +5,7 @@
     height: 80vh;
     width: auto;
     grid-gap: 0.5rem;
-    grid-template-columns: repeat(8, auto);
+    grid-template-columns: repeat(2, auto);
 }
 
 .casilla{
@@ -61,7 +61,7 @@
 #headerPage{
     display: grid;
     height: 10vh;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto auto; 
     place-items: center;
     font-family: 'Ravi Prakash', cursive;
     font-size: 30px;
@@ -90,4 +90,15 @@
     height: 100%;
     width: 100%;
     background-repeat: no-repeat;
+}
+
+.barra-vacia{
+    background-color: green;
+    opacity: 0.9;
+    border-radius: 100px;
+}
+
+
+.barra-llena{
+    background-color: green;
 }
