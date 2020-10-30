@@ -1,0 +1,95 @@
+% article example for classicthesis.sty
+\documentclass[10pt,a4paper]{article} % KOMA-Script article scrartcl
+\usepackage{import}
+\usepackage{xifthen}
+\usepackage{pdfpages}
+\usepackage{transparent}
+\newcommand{\incfig}[1]{%
+    \def\svgwidth{\columnwidth}
+    \import{./figures/}{#1.pdf_tex}
+}
+\usepackage{lipsum}     %lorem ipsum text
+\usepackage{titlesec}   %Section settings
+\usepackage{titling}    %Title settings
+\usepackage[margin=10em]{geometry}  %Adjusting margins
+\usepackage{setspace}
+\usepackage{listings}
+\usepackage{amsmath}    %Display equations options
+\usepackage{amssymb}    %More symbols
+\usepackage{xcolor}     %Color settings
+\usepackage{pagecolor}
+\usepackage{mdframed}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{longtable}
+\usepackage{multicol}
+\usepackage{graphicx}
+\graphicspath{ {./Images/} }
+\setlength{\columnsep}{1cm}
+
+% ====| color de la pagina y del fondo |==== %
+\pagecolor{white}
+\color{black}
+
+
+
+\begin{document}
+    %========================{TITLE}====================%
+    \title{{  Parcial Desarrollo web Parte Teórica  }}
+    \author{{Rodrigo Castillo}}
+    \date{\today}
+
+    \maketitle
+
+
+    %=======================NOTES GOES HERE===================%
+    \section{Describe brevemente cuál es la ventaja de utilizar web components
+    en nuestros proyectos y cuál es su relación con los frameworks actuales.}
+
+        Los componentes web son etiquetas personalizadas que nos permiten
+        desarrollar de manera mas ágil y ligera, los frameworks actuales como
+        Angular nos proporcionan una lista de web components previamente
+        elaborados con distintas funcionalidades, con eso, ya no es necesario
+        elaborar todo el diseño de un elemento principal de nuesta página sino
+        que simplemente podemos modificar uno ya previamente hecho.
+
+    \section{Describe brevemente que dignifica que javascript funcione de manera asíncrona}
+
+        Como programadores estamos acostumbrados a que nuestros programas de
+        ejecuten de manera secuencial (en lenguajes como Python, C++, Bash,
+        Ruby, Java...)a menos que les indiquemos lo contrario. Esto ocurre
+        porque los procesadores y el lenguaje de ensamblador funciona de manera
+        secuencial,
+        sin embargo, en el mundo del desarrollo web, los scripts se ejecutan de
+        manera asincrónica pues es necesario que el browser no se sobrecargue y
+        pueda cargar todo el contenido de la aplicación lo más rápido posible ,
+        esto quiere decir que los algoritmos que están
+        plasmados en el código no se ejecutan de manera secuencial.  esto puede
+        conducir a problemas, bugs o vulnerabilidades al momento de desarrollar
+        una aplicación si no se hace un manejo de esto de forma adecuada, puede
+        resultar un dolor de cabeza para el desarrollador.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    %=======================NOTES ENDS HERE===================%
+
+    % bib stuff
+    \nocite{*}
+    \addtocontents{toc}{{}}
+    \addcontentsline{toc}{section}{\refname}
+    \bibliographystyle{plain}
+    \bibliography{../Bibliography}
+\end{document}
