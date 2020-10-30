@@ -1,0 +1,43 @@
+
+.casilla{
+    display: grid;
+    background-color: tomato;
+    height: 30vh;
+    width: 94vw;
+    margin-left: 3vw;
+    grid-template-areas: 
+    'botonsito botonsito'
+    'botonsito botonsito'
+}
+
+body{
+    background-color: teal;
+
+}
+
+.punto2{
+    display: grid;
+    background-color: blue;
+    height: 30vh;
+    width: 94vw;
+    margin-top: 3vh;
+    margin-left: 3vw;
+    grid-template-columns: repeat(4,auto);
+}
+
+.cpunto2{
+    text-align: center;
+    margin: auto;
+    font-size: 50px;
+}
+
+.cpunto2:hover{
+    opacity: 0.5;
+    color: yellow;
+}
+
+.botonsito{
+text-align: center;
+margin: auto;
+font-size: 100px;
+}

@@ -212,7 +212,7 @@ function stopSong(){
     if(ismuted){
         audio.play();
         audiobutton.style.backgroundImage = "url('MuteOn.png')";
-        ismuted = false;   
+        ismuted = false;
     }else{
         audio.pause();
         audiobutton.style.backgroundImage = "url('muteOff.png')";
